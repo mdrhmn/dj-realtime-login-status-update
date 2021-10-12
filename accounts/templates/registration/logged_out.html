@@ -1,0 +1,19 @@
+<nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+        {% if request.user.is_authenticated%}
+        <div class="p-2">
+            <a href="{% url'logout' %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true"> Sign
+                out </a>
+        </div>
+        <div class="p-2" style="color: #380e16">
+            Hi <strong> {{request.user.username}} </strong>
+        </div>
+
+        {% else%}
+        <a href="{% url'login' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"> Sign in </a>
+        {% endif%}
+    </form>
+</nav>
+
+You have successfully logged out.
+<a href="{% url'login' %}"> Log in </a> to continue

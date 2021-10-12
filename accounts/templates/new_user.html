@@ -1,0 +1,42 @@
+{% load static %}
+
+<h2> NEW USER </h2>
+
+<nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+        {% if request.user.is_authenticated%}
+        <div class="p-2">
+            <a href="{% url 'logout' %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true"> Sign
+                out </a>
+        </div>
+        <div class="p-2" style="color: #380e16">
+            Hi <strong> {{request.user.username}} </strong>
+        </div>
+
+        {% else%}
+        <a href="{% url 'login' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"> Sign in
+        </a>
+        {% endif%}
+    </form>
+</nav>
+
+
+<p> Automatically update user information when users edit information or subscribe. </p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th> Username </th>
+            <th> Status </th>
+        </tr>
+    </thead>
+    <tbody id="new_user">
+        {% include "includes/users.html"%}
+    </tbody>
+</table>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script src="{% static 'js/channels/reconnecting-websocket.min.js' %}"> </script>
+<script src="{% static 'js/channels/new_user.js' %}"> </script>

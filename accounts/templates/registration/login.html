@@ -1,0 +1,19 @@
+<style>
+    .form-signin {
+        max-width: 380px;
+        padding: 15px 35px 45px;
+        margin: 0 auto;
+        margin-top: 30px;
+        background-color: #fff;
+        border: 1px solid rgba (0.0, 0, 0.1);
+    }
+</style>
+
+<div class="wrapper">
+    <form class="form-signin" method="post">
+        {% csrf_token%}
+        {{form}}
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit"> Login </button>
+    </form>
+</div>
