@@ -4,7 +4,7 @@ Repository for creating users’ online-offline status real-time updates using D
 
 ## Run Project Locally
 
-To run this app in your local environment, run the following preferably in a a virtual environment:
+To run this app in your local environment, run the following preferably in a virtual environment:
 
 ```
 pip install -r requirements.txt
