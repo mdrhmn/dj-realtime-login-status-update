@@ -22,3 +22,6 @@ The following shows the architecture of WebSockets using Django Channels:
     - This extensive guide serves as the foundation for this project
     - However, because the guide was written back in 2019, some of the code implementations are wrong and faulty. Necessary modifications were made to successfully run the project.
     - Although the author provides a GitHub repository, unfortunately the repository has been deleted.
+2. [ReconnectingWebSocket](https://github.com/joewalnes/reconnecting-websocket)
+   - A small JavaScript library that decorates the WebSocket API to provide a WebSocket connection that will automatically reconnect if the connection is dropped.
+   - One of the dependencies of the above tutorial that was not included.
