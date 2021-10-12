@@ -35,8 +35,11 @@
     </tbody>
 </table>
 
-
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
+<!-- 
+    A small JavaScript library that decorates the WebSocket API to provide a WebSocket connection that will automatically reconnect if the connection is dropped.
+    Enable only if ReconnectingWebSocket is used in new_user.js
+-->
 <script src="{% static 'js/channels/reconnecting-websocket.min.js' %}"> </script>
 <script src="{% static 'js/channels/new_user.js' %}"> </script>
