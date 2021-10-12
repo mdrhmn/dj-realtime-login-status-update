@@ -20,40 +20,29 @@ Redis is used as a backing store for Channels. Like an in-memory cache.
 
 If you don't have Docker installed on your computer, you need to install it before you can continue. When you have Docker running, you can run this command to start the redis server:
 
-`docker run --name <CONTAINER_NAME> -p 6379:6379 -d redis`
+```
+docker run --name <CONTAINER_NAME> -p 6379:6379 -d redis
+```
 
 ### Using Homebrew (Mac)
 
 If you don’t have Homebrew, install it with the following command:
 
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)`
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)
+```
 
 Once Redis is installed using Homebrew, use Homebrew to launch it:
 
-`brew services start redis`
+```
+brew services start redis
+```
 
 To stop Redis using Homebrew:
 
-`brew services stop redis`
-
-## Building a Docker Image
-
-To build a Docker image of this application and run it, do the following:
-
-1. Install Docker
-2. Build the image using the following:
-   ```
-   docker build -t <NAME> .
-   ```
-   - The t flag indicates the name for this image (an optional tag is also possible using the name:tag syntax)
-   - The . at the end refers that the Dockerfile is in the current directory (ensure that the image is built when in this project directory)
-3. Run the built image using the following:
-   ```
-   docker run -p 8501:8501 <NAME>
-   ```
-   - The p flag indicates publishing the exposed port to the host interface.
-   - 8501:8501 refers to the binding of the host port to the exposed container port.
-   - With this, once the container has started, the application can be viewed at `localhost:8501`.
+```
+brew services stop redis
+```
 
 ## WebSockets 101
 
