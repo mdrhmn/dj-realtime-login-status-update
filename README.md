@@ -12,13 +12,29 @@ pip install -r requirements.txt
 
 The app can now be viewed at `localhost:8000` or preferably `127.0.0.1`.
 
-## Running Redis on Docker
+## Running Redis
 
-Redis is used as a backing store for Channels. Like an in-memory cache. I'm going to use Docker to install and run a Redis server.
+Redis is used as a backing store for Channels. Like an in-memory cache. 
+
+### Using Docker
 
 If you don't have Docker installed on your computer, you need to install it before you can continue. When you have Docker running, you can run this command to start the redis server:
 
-`docker run -p 6379:6379 -d redis:5`
+`docker run --name <CONTAINER_NAME> -p 6379:6379 -d redis`
+
+### Using Homebrew (Mac)
+
+If you don’t have Homebrew, install it with the following command:
+
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)`
+
+Once Redis is installed using Homebrew, use Homebrew to launch it:
+
+`brew services start redis`
+
+To stop Redis using Homebrew:
+
+`brew services stop redis`
 
 ## Building a Docker Image
 
