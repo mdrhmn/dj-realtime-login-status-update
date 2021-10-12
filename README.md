@@ -1,6 +1,6 @@
 # Django Real-Time Login Status Updates
 
-Repository for creating users’ online-offline status real-time updates using Django Channels web socket and Redis.
+Repository for creating users’ online-offline status real-time updates using Django Channels web socket and Redis. his side-project serves as a prototype/proof-of-concept for developing a real-time chatroom for mental health experts to communicate with Arduino smart watch users as part of my Final Year Project (FYP) titled 'Fitweet: Arduino-based Smart Watch for Early Anticipatory Anxiety Notification System'.
 
 ## Run Project Locally
 
