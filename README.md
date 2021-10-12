@@ -2,6 +2,43 @@
 
 Repository for creating users’ online-offline status real-time updates using Django Channels web socket and Redis.
 
+## Run Project Locally
+
+To run this app in your local environment, run the following preferably in a a virtual environment:
+
+```
+pip install -r requirements.txt
+```
+
+The app can now be viewed at `localhost:8000` or preferably `127.0.0.1`.
+
+## Running Redis on Docker
+
+Redis is used as a backing store for Channels. Like an in-memory cache. I'm going to use Docker to install and run a Redis server.
+
+If you don't have Docker installed on your computer, you need to install it before you can continue. When you have Docker running, you can run this command to start the redis server:
+
+`docker run -p 6379:6379 -d redis:5`
+
+## Building a Docker Image
+
+To build a Docker image of this application and run it, do the following:
+
+1. Install Docker
+2. Build the image using the following:
+   ```
+   docker build -t <NAME> .
+   ```
+   - The t flag indicates the name for this image (an optional tag is also possible using the name:tag syntax)
+   - The . at the end refers that the Dockerfile is in the current directory (ensure that the image is built when in this project directory)
+3. Run the built image using the following:
+   ```
+   docker run -p 8501:8501 <NAME>
+   ```
+   - The p flag indicates publishing the exposed port to the host interface.
+   - 8501:8501 refers to the binding of the host port to the exposed container port.
+   - With this, once the container has started, the application can be viewed at `localhost:8501`.
+
 ## WebSockets 101
 
 Normally, Django uses HTTP to communicate between the client and server:
