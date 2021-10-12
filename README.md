@@ -62,3 +62,5 @@ The following shows the architecture of WebSockets using Django Channels:
 2. [ReconnectingWebSocket](https://github.com/joewalnes/reconnecting-websocket)
    - A small JavaScript library that decorates the WebSocket API to provide a WebSocket connection that will automatically reconnect if the connection is dropped.
    - One of the dependencies of the above tutorial that was not included.
+3. [Deploying Docker on Heroku](https://www.youtube.com/watch?v=tTwGdUTR5h8)
+    - This YouTube tutorial guides on how to deploy a Docker containers in Heroku, should you decide to deploy it in that manner.
