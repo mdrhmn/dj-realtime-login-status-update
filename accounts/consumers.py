@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from asgiref.sync import sync_to_async
 
 
-class NewUserConsumer (AsyncJsonWebsocketConsumer):
+class NewUserConsumer(AsyncJsonWebsocketConsumer):
     async def connect(self):
         await self.accept()
         await self.channel_layer.group_add("users", self.channel_name)
