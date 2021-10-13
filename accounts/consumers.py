@@ -1,9 +1,9 @@
-from channels.db import database_sync_to_async
 from channels.generic.websocket import AsyncJsonWebsocketConsumer
-from .models import Profile
-from django.contrib.auth.models import User
 from django.template.loader import render_to_string
+from channels.db import database_sync_to_async
+from django.contrib.auth.models import User
 from asgiref.sync import sync_to_async
+from .models import *
 
 
 class NewUserConsumer(AsyncJsonWebsocketConsumer):
